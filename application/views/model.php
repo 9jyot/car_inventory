@@ -11,7 +11,7 @@
 	                        <div class="form-group form-inline">
 		                        <label class="control-label col-sm-2">Model Name</label>
 		                        <div class="col-sm-4">
-			                        <input type="text" class="form-control m-b-20" name="model" ng-model="modelForm.required" validator="required,minlength" minlength = "3"  message-id="model" />
+			                        <input type="text" class="form-control m-b-20" name="name" ng-model="modelForm.name" validator="required,minlength" minlength = "3"  message-id="model" />
 			                        <span id="model"></span><span class="validation-invalid">{{errorMessage.modlnm }}</span>
 		                        </div>
 		                        <label class="control-label col-sm-2">Manufacturer Name</label>
@@ -29,7 +29,7 @@
                            	<div class="form-group form-inline">
 		                        <label class="control-label col-sm-2">Color</label>
 		                        <div class="col-sm-4">
-			                        <input type="text" class="form-control m-b-20" name="color" ng-model="modelForm.modelColor" validator="required"  message-id="color"/>
+			                        <input type="text" class="form-control m-b-20" name="color" ng-model="modelForm.color" validator="required"  message-id="color"/>
 			                        <span id="color"></span><span class="validation-invalid">{{errorMessage }}</span>
 		                        </div>
 		                        
@@ -37,17 +37,14 @@
                            	<div class="form-group form-inline">
 		                        <label class="control-label col-sm-2">Manufacturing Year</label>
 		                        <div class="col-sm-4">
-			                      <select ng-model="modelForm.modelMfgYear" name="manufacturing_year" class="yrselectdesc form-control">
-								  <option ng-for= ></option>
-								  </select>
-			                        
+								<datepicker ng-model="modelForm.year" name="year" min-mode="year" datepicker-mode="'year'"></datepicker>
 		                        </div>
 		                        
                            	</div>
                            	<div class="form-group form-inline">
 		                        <label class="control-label col-sm-2">Registration Number</label>
 		                        <div class="col-sm-4">
-			                        <input type="text" class="form-control m-b-20" name="registrationNo" ng-model="modelForm.modelRegNo" min="10" max="10" validator="required" valid-method="submit-only" message-id="registrationNo"/>
+			                        <input type="text" class="form-control m-b-20" name="registrationNo" ng-model="modelForm.registrationNo" min="10" max="10" validator="required" valid-method="submit-only" message-id="registrationNo"/>
 			                        <span id="registrationNo"></span><span class="validation-invalid">{{errorMessage }}</span>
 		                        </div>
 		                        
@@ -55,7 +52,7 @@
                            	<div class="form-group form-inline">
 		                        <label class="control-label col-sm-2">Note</label>
 		                        <div class="col-sm-8">
-			                        <textarea style="overflow:auto;resize:none" rows="3" cols="20" name="note" ng-model="modelForm.modelNote"  valid-method="submit-only"></textarea>
+			                        <textarea style="overflow:auto;resize:none" rows="3" cols="20" name="note" ng-model="modelForm.note"  valid-method="submit-only"></textarea>
 			                        
 		                        </div>
 		                        
@@ -86,6 +83,7 @@
 	                        <button class="btn btn-danger" ng-click="modelForm.reset(ModelForm)">Reset</button>
 	                        
 	                    </div>
+
 						<pre>{{ modelForm |json }}</pre>
 	                </fieldset>
 	            </form> 
@@ -95,6 +93,10 @@
         <!-- /#page-content-wrapper -->
          <script src="js/angular-validation/add-model.js"></script>
         <script src="js/plugin/fileup.js"></script> 
+
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>\
+    <script src="example.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         
 <script>
        
