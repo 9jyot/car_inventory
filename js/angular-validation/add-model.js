@@ -20,10 +20,16 @@
         if(status.$$state.value != "error")
         {     
           //console.log($scope);
-          var model_val = $scope.ModelForm.model.$modelValue.trim();
-          
+          console.log(form)
           if(model_val.length > 2){
-            var params = {'name':model_val };
+            var params = {
+              name:form.name.$viewValue.trim(),
+              manufacturerName:form.manufacturerName.$viewValue.trim(),
+              color:form.color.$viewValue.trim(),
+              note:form.note.$viewValue.trim(),
+              year:form.year.$viewValue,
+              registrationNo:form.registrationNo.$viewValue.trim()
+             };
             $http({
                 method: 'POST',
                 url: 'http://localhost/mini_car_inventory/model/model/addModel',
