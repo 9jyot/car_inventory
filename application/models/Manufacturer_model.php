@@ -1,11 +1,12 @@
 <?php
 class Manufacturer_model extends CI_Model {
 
-	public function addModel(Type $var = null)
-	{
-		# code...
-		print_r($_REQUEST)
+	function getManufacturer(){
+		$query = $this->db->get('manufacturer');
+			
+		return $query->result_array();
 	}
+	
 	public function addManufacturer($data){
 
 		//$this->db->get_where('manufacturer', $data);

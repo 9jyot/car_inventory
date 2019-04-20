@@ -372,16 +372,18 @@ class CI_Upload {
 	 * @return	bool
 	 */
 	public function do_upload($field = 'userfile')
-	{
+	{	
 		// Is $_FILES[$field] set? If not, no reason to continue.
 		if (isset($_FILES[$field]))
-		{
+		{		
 			$_file = $_FILES[$field];
 		}
 		// Does the field name contain array notation?
 		elseif (($c = preg_match_all('/(?:^[^\[]+)|\[[^]]*\]/', $field, $matches)) > 1)
 		{
+			
 			$_file = $_FILES;
+				
 			for ($i = 0; $i < $c; $i++)
 			{
 				// We can't track numeric iterations, only full field names are accepted

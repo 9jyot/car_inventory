@@ -6,14 +6,17 @@
                         Mini Car Inventory
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a class="<?php echo active_anchor('dashboard'); ?>" target="_self" href="">Dashboard</a>
+                </li> -->
+                <li>
+                    <a class="<?php echo active_anchor('manufacturer'); ?>" href="manufacturer" target="_self">Add Manufacturer</a>
                 </li>
                 <li>
-                    <a class="<?php echo active_anchor('manufacturer'); ?>" href="manufacturer" target="_self">Manufacturer</a>
+                    <a class="<?php echo active_anchor('model'); ?>" href="model" target="_self">Add Model</a>
                 </li>
                 <li>
-                    <a class="<?php echo active_anchor('model'); ?>" href="model" target="_self">Model</a>
+                    <a class="<?php echo active_anchor('inventory'); ?>" href="inventory" target="_self">View Inventory</a>
                 </li>
                 
             </ul>
