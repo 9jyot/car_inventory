@@ -10,8 +10,8 @@
     <title>Mini Car inventory</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+  <!--   <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Sidebar CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
@@ -21,7 +21,9 @@
  	<link rel="stylesheet" href="css/angular-validation/main.css"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
+    
 <script src="js/angular-validation/angular-sanitize.min.js" integrity="sha256-rkC3YaCKtbLotg8lQpxqYki+DDOVXjcA5wTSxjRlI0E=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>

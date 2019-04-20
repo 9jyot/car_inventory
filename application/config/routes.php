@@ -54,5 +54,6 @@ $route['default_controller'] = 'dashboard';
 $route['manufacturer'] = 'manufacturer/manufacturer';
 //$route['manufacturer/:any'] = 'manufacturer/manufacturer';
 $route['model'] = 'model/model';
+$route['inventory'] = 'inventory/inventory';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
